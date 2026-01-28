@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>code</th>
+        <th>name</th>
+        <th>hành động</th>
+    </tr>
+    <tr>
+    <tr th:each="c: ${lists}">
+        <td th:text="${c.categoryCode}"></td>
+        <td th:text="${c.categoryName}"></td>
+    </tr>
+    </tr>
+</table>
+</body>
+</html>
