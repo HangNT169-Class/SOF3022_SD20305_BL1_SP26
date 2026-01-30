@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<select>
+    <option th:each="cv :${listChucVu}"
+            th:value="${cv.id}" th:text="${cv.ten}">
+    </option>
+</select>
+<table border ="1">
+    <thead>
+    <tr>
+        <th>Mã nhân viên</th>
+        <th>Tên nhân viên</th>
+        <th>SĐT nhân viên</th>
+        <th>Mã chức vụ</th>
+        <th>Tên chức vụ</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="nv :${listNhanVien}">
+        <td th:text="${nv.ma}"></td>
+        <td th:text="${nv.ten}"></td>
+        <td th:text="${nv.sdt}"></td>
+        <td th:text="${nv.idCV.ma}"></td>
+        <td th:text="${nv.idCV.ten}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
